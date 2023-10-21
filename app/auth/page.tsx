@@ -27,7 +27,7 @@ export default function SignIn() {
 
   return (
     <section className="flex flex-row items-center justify-center">
-      <div className="flex items-center">
+      <div className="flex items-center ml-32">
         <Image src={Pikachu} alt="" width={780} />
       </div>
 
