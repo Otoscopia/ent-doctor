@@ -1,6 +1,9 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
+
+const themeColor = require("./utils/colors.ts");
 
 const config: Config = {
+  darkMode: "media",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,13 +11,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+      colors: themeColor,
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [],
 };
-export default config
+export default config;
