@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Pikachu from "@/public/pikachu-sign-in.svg";
+import Pikachu from "@/public/pikachu-waiting.svg";
 
 export default function EmptyTable() {
   return (
@@ -10,7 +10,7 @@ export default function EmptyTable() {
             Pikachu have an empty patients.
           </h1>
           <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-            Please contact some nurse to have them screen some patients.
+            Please contact Nurse Joy to have them screen some patients.
           </p>
         </div>
         <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
