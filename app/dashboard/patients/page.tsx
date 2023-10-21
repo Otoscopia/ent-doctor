@@ -1,7 +1,9 @@
-import TableTitles from "@/components/table/table-titles";
-import TableBody from "@/components/table/table-body";
-import TableHeader from "@/components/table/table-header";
-import TableNav from "@/components/table/table-nav";
+import {
+  TableBody,
+  TableHeader,
+  TableNav,
+  TableTitles,
+} from "@/app/components";
 
 export default function Patients() {
   return (
