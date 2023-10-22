@@ -1,6 +1,6 @@
 export default function TableTitles() {
   return (
-    <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-800 dark:text-gray-400">
       <tr>
         <th scope="col" className="px-4 py-3">
           Name

@@ -1,6 +1,6 @@
 "use client";
 
-import { Sidebar } from "@/app/components";
+import Sidebar from "@/components/sidebar";
 import React, { ReactNode, useEffect, useState } from "react";
 import { getSession } from "../api/auth/routes";
 import { useRouter } from "next/navigation";
@@ -16,19 +16,19 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
       try {
         const session = await getSession();
         if (!session) {
-          push("/auth");
+          push("/sign-in");
           localStorage.clear();
         } else {
           const user = getAccount();
           if (!(await user).labels.includes("doctor")) {
-            push("/auth");
+            push("/sign-in");
             localStorage.clear();
             throw new Error("You are not a doctor");
           }
           setLoading(false);
         }
       } catch (error) {
-        push("/auth");
+        push("/sign-in");
         setLoading(false);
       }
     };

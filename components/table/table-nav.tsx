@@ -10,10 +10,10 @@ export default function TableNav() {
           {" "}
           1-10
         </span>{" "}
-        of
-        <span className="font-semibold text-gray-900 dark:text-white"> 40</span>
+        {/* of
+        <span className="font-semibold text-gray-900 dark:text-white"> 40</span> */}
       </span>
-      <ul className="inline-flex items-stretch -space-x-px">
+      {/* <ul className="inline-flex items-stretch -space-x-px">
         <li>
           <a
             href="#"
@@ -97,7 +97,7 @@ export default function TableNav() {
             </svg>
           </a>
         </li>
-      </ul>
+      </ul> */}
     </nav>
   );
 }

@@ -1,8 +1,8 @@
 "use client";
 
+import { deleteCurrentSession } from "@/app/api/appwrite";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { deleteCurrentSession } from "../api/appwrite";
 
 export default function Sidebar() {
   const path = usePathname();
@@ -35,16 +35,16 @@ export default function Sidebar() {
 
       <aside
         id="default-sidebar"
-        className="top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+        className="top-0 left-0 z-40 sticky w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
         aria-label="Sidenav"
       >
         <div className="overflow-y-auto py-5 px-3 h-full bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
           <ul className="space-y-2">
             <li>
               <Link
-                href="/dashboard"
+                href="/app"
                 className={`${linkStyle} ${path.includes(
-                  "/dashboard" ? "bg-primary-1600" : ""
+                  "/app" ? "bg-primary-1600" : ""
                 )}`}
               >
                 <svg
@@ -62,7 +62,7 @@ export default function Sidebar() {
             </li>
             <li>
               <Link
-                href="/dashboard/patients"
+                href="/patients"
                 className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <svg
