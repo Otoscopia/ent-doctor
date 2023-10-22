@@ -9,6 +9,14 @@ const nextConfig = {
     NURSE_COLLECTION: process.env.NURSE_COLLECTION,
     FOLLOW_UPS_COLLECTION: process.env.FOLLOW_UPS_COLLECTION,
   },
+  images: {
+    domains: [
+      "www.github.com",
+      "unsplash.com",
+      "picsum.photos",
+      "robohash.org",
+    ],
+  },
 };
 
 module.exports = nextConfig;
