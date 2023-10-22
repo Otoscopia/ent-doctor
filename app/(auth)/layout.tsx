@@ -21,11 +21,12 @@ export default function AuthLayout({ children }: LayoutProps) {
           if (!session.labels.includes("doctor")) {
             push("/sign-in");
             localStorage.clear();
-            throw new Error("You are not a doctor");
+            throw new Error("Hello: You are not a doctor");
           }
           push("/app");
           setLoading(false);
         }
+        setLoading(false);
       } catch (error) {
         push("/sign-in");
         setLoading(false);
