@@ -1,4 +1,4 @@
-import { createSession, getAccount } from "../appwrite";
+import { createSession, getAccount, teams } from "../appwrite";
 
 export const login = async (loginBody: LoginInterface) => {
   try {
@@ -23,5 +23,14 @@ export const getSession = async () => {
     return account;
   } catch (error) {
     console.error("Error occurred during getSession:", error);
+  }
+};
+
+export const getTeams = async () => {
+  try {
+    const team = await teams.list();
+    return team;
+  } catch (error) {
+    console.log("Error fetching teams");
   }
 };
