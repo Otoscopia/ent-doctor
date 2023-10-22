@@ -12,7 +12,7 @@ import {
 import { useRouter } from "next/navigation";
 import Content from "./widgets/content";
 import { SnapshotPayload } from "@/interface/snapshot-interface";
-import { Dropdown, Datepicker } from "flowbite-react";
+import { Dropdown, Datepicker, Modal, Button } from "flowbite-react";
 
 interface Params {
   params: { id: string };
@@ -25,6 +25,8 @@ export default function Patient({ params }: Params) {
   const [status, setStatus] = useState("");
   const [date, setDate] = useState<Date>();
   const [message, setMessage] = useState("");
+  const [openModal, setOpenModal] = useState<string | undefined>();
+  const props = { openModal, setOpenModal };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -85,24 +87,24 @@ export default function Patient({ params }: Params) {
         <Header patient={record!.patient} status={record!.status} />
       </div>
       <Content record={record!} />
-
       <div className="fixed right-8 bottom-8">
         <button
           type="button"
           className="btn btn-primary w-min"
-          onClick={() => document.getElementById("my_modal_1")!.showModal()!}
+          onClick={() => props.setOpenModal("default")}
         >
           Update
         </button>
       </div>
 
-      <dialog id="my_modal_1" className="modal">
-        <div className="modal-box">
-          <h3 className="font-bold text-lg">Message to the patient!</h3>
-          <p className="pt-4 pb-1">
-            Press ESC key or click the button below to close
-          </p>
-          <div className="modal-action flex flex-col">
+      <div className="items-center justify-center flex">
+        <Modal
+          show={props.openModal === "default"}
+          onClose={() => props.setOpenModal(undefined)}
+          className="p-4 bg-transparent m-4"
+        >
+          <Modal.Header className="p-4">Doctors&apos; thoughts</Modal.Header>
+          <Modal.Body>
             <form method="dialog" className="space-y-4" onSubmit={handleSubmit}>
               <Dropdown
                 label={
@@ -147,9 +149,9 @@ export default function Patient({ params }: Params) {
                 Submit
               </button>
             </form>
-          </div>
-        </div>
-      </dialog>
+          </Modal.Body>
+        </Modal>
+      </div>
     </section>
   );
 }
