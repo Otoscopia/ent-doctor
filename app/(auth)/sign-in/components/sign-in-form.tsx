@@ -31,7 +31,7 @@ export default function LogInForm() {
       });
       localStorage.setItem("user", JSON.stringify(user));
       setState({ email: "", password: "", remember: false });
-      push("/dashboard");
+      push("/app");
     } catch (err: any) {
       toast({
         variant: "destructive",
