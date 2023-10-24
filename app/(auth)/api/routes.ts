@@ -1,4 +1,4 @@
-import { createSession, getAccount, teams } from "../appwrite";
+import { createSession, getAccount, teams } from "../../api/appwrite";
 
 export const login = async (loginBody: LoginInterface) => {
   try {
