@@ -17,7 +17,7 @@ import TableBody from "@/components/table/table-body";
 import EmptyTable from "@/components/table/empty-table";
 import TableNav from "@/components/table/table-nav";
 import Loading from "@/app/loading";
-import { getTeams } from "@/app/api/auth/routes";
+import { getTeams } from "@/app/(auth)/api/routes";
 
 export default function Dashboard() {
   const [screenings, setScreenings] = useState<Screening[]>([]);

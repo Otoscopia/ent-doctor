@@ -2,7 +2,7 @@
 
 import Sidebar from "@/components/sidebar";
 import React, { ReactNode, useEffect, useState } from "react";
-import { getSession } from "../api/auth/routes";
+import { getSession } from "../(auth)/api/routes";
 import { useRouter } from "next/navigation";
 import Loading from "../loading";
 import { getAccount } from "../api/appwrite";

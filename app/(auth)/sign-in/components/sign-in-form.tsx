@@ -1,7 +1,7 @@
-import { login } from "@/app/api/auth/routes";
-import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
 import { FormEvent, useState } from "react";
+import { useToast } from "@/components/ui/use-toast";
+import { login } from "@/app/(auth)/api/routes";
 
 export default function LogInForm() {
   const [state, setState] = useState({

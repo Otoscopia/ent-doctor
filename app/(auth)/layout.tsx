@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { getSession } from "../api/auth/routes";
+import { getSession } from "./api/routes";
 import Loading from "../loading";
 import { LayoutProps } from "@/interface/layout-interface";
 
