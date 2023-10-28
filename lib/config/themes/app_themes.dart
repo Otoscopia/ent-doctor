@@ -18,11 +18,4 @@ final FluentThemeData darkTheme = FluentThemeData(
   scaffoldBackgroundColor: darkBackground,
   cardColor: darkBackgroundAccent,
   fontFamily: "Quicksand",
-  buttonTheme: ButtonThemeData.all(ButtonStyle(
-    textStyle: ButtonState.all<TextStyle>(
-      const TextStyle(
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-  )),
 );
