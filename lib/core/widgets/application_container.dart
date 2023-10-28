@@ -1,3 +1,4 @@
+import 'package:ent_doctors/core/constants/spacing_constants.dart';
 import 'package:ent_doctors/core/widgets/offline_bar.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter_offline/flutter_offline.dart';
@@ -9,17 +10,20 @@ class ApplicationContainer extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return OfflineBuilder(
-      connectivityBuilder: (context, value, child) {
-        final bool connected = value != ConnectivityResult.none;
-        
-        return Stack(
-          fit: StackFit.expand,
-          children: [child, OfflineBar(connected: connected)],
-        );
-      },
-      child: Column(
-        children: [Expanded(child: child)],
+    return ScaffoldPage(
+      padding: noPadding,
+      content: OfflineBuilder(
+        connectivityBuilder: (context, value, child) {
+          final bool connected = value != ConnectivityResult.none;
+
+          return Stack(
+            fit: StackFit.expand,
+            children: [child, OfflineBar(connected: connected)],
+          );
+        },
+        child: Column(
+          children: [Expanded(child: child)],
+        ),
       ),
     );
   }
