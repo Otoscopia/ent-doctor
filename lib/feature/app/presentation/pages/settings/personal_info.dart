@@ -10,28 +10,30 @@ class PersonalInfo extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Card(
-        child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        Text(personalInformationTitle, style: FluentTheme.of(context).typography.title),
-        mediumHeight,
-        const Text(updateProfileText),
-        mediumHeight,
-        const Divider(),
-        largeHeight,
-        const ProfileContainer(),
-        largeHeight,
-        const Divider(),
-        largeHeight,
-        const FullNameAndEmail(),
-        largeHeight,
-        const Divider(),
-        largeHeight,
-        const PhoneAndWork(),
-        largeHeight,
-        const UpdateButton()
-      ],
-    ));
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Text(personalInformationTitle,
+              style: FluentTheme.of(context).typography.title),
+          mediumHeight,
+          const Text(updateProfileText),
+          mediumHeight,
+          const Divider(),
+          largeHeight,
+          const ProfileContainer(),
+          largeHeight,
+          const Divider(),
+          largeHeight,
+          const FullNameAndEmail(),
+          largeHeight,
+          const Divider(),
+          largeHeight,
+          const PhoneAndWork(),
+          largeHeight,
+          const UpdateButton()
+        ],
+      ),
+    );
   }
 }
