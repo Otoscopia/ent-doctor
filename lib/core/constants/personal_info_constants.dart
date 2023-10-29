@@ -1,0 +1,14 @@
+const String personalInformationTitle = 'Personal Information';
+const String updateProfileText = "Update your profile, contact details, and preferences to personalize your experience.";
+const String profilePictureText = "Profile picture";
+const String profilePictureFileTypeText = "PNG, JPEG under 15MB";
+const String uploadProfilePictureText = "Upload Profile Picture";
+const String fullNameText = "Full Name";
+const String fullNameHintText = "Enter your full name";
+const String phoneNumberText = "Phone Number";
+const String phoneNumberHintText = "Enter your phone number";
+const String workAddressText = "Work Address";
+const String workAddressHintText = "Enter your work address";
+const String updateButtonText = "Update";
+const String cancelButtonText = "Cancel";
+const String updateProfileSuccessText = "Profile updated successfully";
