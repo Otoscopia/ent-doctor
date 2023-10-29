@@ -1,8 +1,9 @@
-import 'package:ent_doctors/config/core.dart';
-import 'package:ent_doctors/core/constants/global_constants.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:styled_widget/styled_widget.dart';
+
+import 'package:ent_doctors/config/config.dart';
+import 'package:ent_doctors/core/core.dart';
 
 class OfflineBar extends ConsumerWidget {
   final bool connected;
