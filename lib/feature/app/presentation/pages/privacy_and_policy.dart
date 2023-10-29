@@ -1,9 +1,9 @@
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:styled_widget/styled_widget.dart';
 
 import 'package:ent_doctors/core/core.dart';
 import 'package:ent_doctors/feature/app/presentation/widgets/widgets.dart';
-import 'package:styled_widget/styled_widget.dart';
 
 class PrivacyAndPolicy extends ConsumerWidget {
   const PrivacyAndPolicy({super.key});
