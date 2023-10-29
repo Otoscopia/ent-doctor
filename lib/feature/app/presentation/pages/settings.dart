@@ -18,7 +18,7 @@ class Settings extends ConsumerWidget {
       pane: NavigationPane(
         selected: ref.watch(settingsPageProvider),
         onChanged: (index) => ref.read(settingsPageProvider.notifier).setSettingsNav(index),
-        displayMode: PaneDisplayMode.auto,
+        displayMode: PaneDisplayMode.top,
         items: [
           PaneItemSeparator(),
           PaneItem(
