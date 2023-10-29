@@ -12,15 +12,14 @@ class Settings extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return NavigationView(
       appBar: const NavigationAppBar(
-          title: Text(settingsTitle),
+          title: Padding(padding: EdgeInsets.only(top: 12), child: Text(settingsTitle),),
           automaticallyImplyLeading: false,
-          leading: Icon(FluentIcons.settings)),
+          leading: Padding(padding: EdgeInsets.only(top: 12), child: Icon(FluentIcons.settings))),
       pane: NavigationPane(
         selected: ref.watch(settingsPageProvider),
         onChanged: (index) => ref.read(settingsPageProvider.notifier).setSettingsNav(index),
         displayMode: PaneDisplayMode.top,
         items: [
-          PaneItemSeparator(),
           PaneItem(
             icon: const Icon(FluentIcons.default_settings),
             title: const Text(generalTitle),
