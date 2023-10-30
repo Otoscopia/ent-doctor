@@ -16,6 +16,7 @@ dependencies:
   flutter_offline: ^3.0.0
   flutter_riverpod: ^2.4.4
   flutter_svg: ^2.0.8
+  ionicons: ^0.2.2
   styled_widget: ^0.4.1
   system_theme: ^2.3.1
 
