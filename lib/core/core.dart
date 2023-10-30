@@ -7,6 +7,7 @@ export 'constants/privacy_and_policy_constants.dart';
 export 'constants/personal_info_constants.dart';
 export 'constants/general_settings_constant.dart';
 export 'constants/patient_information_constants.dart';
+export 'constants/home_constants.dart';
 
 export 'widgets/application_container.dart';
 export 'widgets/offline_bar.dart';
