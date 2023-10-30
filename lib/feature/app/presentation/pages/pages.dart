@@ -1,6 +1,7 @@
 export './dashboard.dart';
 export './home.dart';
 export './settings.dart';
+export './patient_information.dart';
 
 export 'settings/general_settings.dart';
 export 'settings/privacy_and_policy.dart';
