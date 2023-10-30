@@ -2,8 +2,7 @@ import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:ent_doctors/core/core.dart';
-import 'package:ent_doctors/feature/app/presentation/riverpod/riverpod.dart';
-import 'package:ent_doctors/feature/app/presentation/pages/pages.dart';
+import 'package:ent_doctors/feature/app/app.dart';
 
 class Settings extends ConsumerWidget {
   const Settings({super.key});
@@ -19,25 +18,7 @@ class Settings extends ConsumerWidget {
         selected: ref.watch(settingsPageProvider),
         onChanged: (index) => ref.read(settingsPageProvider.notifier).setSettingsNav(index),
         displayMode: PaneDisplayMode.top,
-        items: [
-          PaneItem(
-            icon: const Icon(FluentIcons.default_settings),
-            title: const Text(generalTitle),
-            body: const GeneralSettings()
-          ),
-          PaneItemSeparator(),
-          PaneItem(
-            icon: const Icon(FluentIcons.player_settings),
-            title: const Text(personalInfoTitle),
-            body: const PersonalInfo(),
-          ),
-          PaneItemSeparator(),
-          PaneItem(
-            icon: const Icon(FluentIcons.settings_secure),
-            title: const Text(privacyAndPolicyTitle),
-            body: const PrivacyAndPolicy(),
-          ),
-        ],
+        items: settingsTabs,
       ),
     );
   }
