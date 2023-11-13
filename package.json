@@ -19,7 +19,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "crypto-js": "^4.1.1",
-    "flowbite": "^1.8.1",
+    "flowbite": "^2.0.0",
     "flowbite-datepicker": "^1.2.2",
     "flowbite-react": "^0.6.4",
     "lucide-react": "^0.288.0",
